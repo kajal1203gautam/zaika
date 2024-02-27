@@ -5,17 +5,27 @@ import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import VisibilityIcon from '@mui/icons-material/Visibility';
 import RepeatIcon from '@mui/icons-material/Repeat';
-export default function ProductCard() {
+
+
+
+export default function ProductCard({data}) {
+    // console.log(data);
+
     return (
         <>
-            <div className="card border-0 justify-content-center algin-item-center m-4 shadow-lg">
+            <div className="card border-0 flex-fill justify-content-center algin-data-center m-4 shadow-lg" key={data?.id}>
                 <div className="card-body">
-                    <Badge badgeContent={' On Sale'} color="primary">
+                    <Badge badgeContent={data?.badge} color="primary">
                         <div className="img-box-product">
                             {/* <span >On Sale</span> */}
-                            <img src="http://ecommerce.webprotec.org/assets/uploads/media-uploader/group-11649652514.jpg" alt="" className='img-fluid' width={200} />
+                            <img src={data?.image_url} alt="" className='img-fluid breadcrumb-area' width={200} />
                         </div>
                     </Badge>
+                    <h6>{data?.title.slice(0, 20)}</h6>
+                   <div className="d-flex justify-content-between">
+                    <p>Rs.</p>
+                   <p>{data?.price}</p>
+                   </div>
                 </div>
                 {/* <AddShoppingCartIcon />
                 <FavoriteIcon /> */}

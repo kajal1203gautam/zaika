@@ -118,3 +118,71 @@ ul {
 .arrival-wrap{
   background-color: #faf4f0;
 }
+.default-btn.color-black:hover {
+  background-color: transparent;
+  color: #333;
+}
+.default-btn {
+  background-color: #FF6280;
+  color: #fff;
+  border: 1px solid #FF6280;
+  padding: 10px;
+}
+.common-wrapper{
+  background-image: url("/images/img3.jpg");
+  background-size: cover;
+  background-position: left bottom;
+  height: 230px;
+  z-index: 1;
+  position: relative;
+}
+.common-wrapper::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #040b25;
+  opacity: .6;
+  z-index: -1;
+}
+.page-list .list-item {
+  font-family: jost,sans-serif;
+  color: #fff;
+  display: inline-block;
+  position: relative;
+  padding-left: 30px;
+  font-size: 18px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+.list-item:first-child {
+  padding-left: 0;
+  margin-right: 8px;
+}
+.list-item:last-child {
+  color: #FF6280;
+}
+.list-item a {
+  -webkit-transition: all linear .2s;
+  transition: all linear .2s;
+}
+.list-item::after {
+  position: absolute;
+  left: 7px;
+  top: 0;
+  font-weight: 700;
+  content: "|";
+  font-family: line awesome free;
+  color: #fff;
+  line-height: 20px;
+}
+.about-card{
+  position: absolute;
+  top: 480px;
+  right: 90px;
+}
+.text-color{
+  color: #FF6280;
+}
